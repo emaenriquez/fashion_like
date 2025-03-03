@@ -1,8 +1,11 @@
+
+import RegisterComponents from "../components/loginComponents/RegisterComponents";
+
 const Register = () => {
     return (
-        <div>
-            <h2>Login</h2>
-        </div>
+        <>
+            <RegisterComponents></RegisterComponents>
+        </>
     );
 };
 
