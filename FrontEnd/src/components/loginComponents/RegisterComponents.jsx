@@ -1,59 +1,96 @@
 
-import { Link, useNavigate } from 'react-router-dom'
-import Input from '../input'
+import { useNavigate } from 'react-router-dom'
 
 const RegisterComponents = () => {
 
     const navigate = useNavigate();
 
-    const handleLogin = (event) => {
+    const handleRegister = (event) => {
         event.preventDefault();
         // Add login logic here
         console.log('Login button clicked');
-        navigate('/postfeed');
+        navigate('/login');
     };
 
     return (
-        <div className="w-screen min-h-screen flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8">
-            <div className="relative py-3 sm:max-w-xs sm:mx-auto">
-                <div className="min-h-96 px-8 py-6 mt-4 text-left bg-white   rounded-xl shadow-lg">
-                    <form onSubmit={handleLogin}>
-                        <div className="flex flex-col justify-center items-center h-full select-none">
-                            <div className="flex flex-col items-center justify-center gap-2 mb-8">
-                                <Link to="/">
-                                    <img src="https://amethgalarcio.web.app/assets/logo-42fde28c.svg" className="w-8" />
-                                </Link>
-                                <p className="m-0 text-[16px] font-semibold ">Login to your Account</p>
-                                <span class="m-0 text-xs max-w-[90%] text-center text-[#8B8E98]">Get started with our app, just start section and enjoy experience.
-                                </span>
-                            </div>
-                            <Input
+        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8" >
+            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                {/* <img
+                    alt="Your Company"
+                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                    className="mx-auto h-10 w-auto"
+                /> */}
+                <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
+                    Registrese con una nueva cuenta
+                </h2>
+            </div>
+
+            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <form onSubmit={handleRegister} className="space-y-6">
+                    <div>
+                        <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
+                            Nombre de usuario
+                        </label>
+                        <div className="mt-2">
+                            <input
+                                id="username"
+                                name="username"
                                 type="text"
-                                placeholder="username"
-                                labelName="Username"
-                                value="username"
-                            >
-                            </Input>
-                            <Input
+                                required
+                                autoComplete="username"
+                                className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
+                            Gmail
+                        </label>
+                        <div className="mt-2">
+                            <input
+                                id="email"
+                                name="email"
                                 type="email"
-                                placeholder="email"
-                                labelName="Email"
-                                value="email"
-                            >
-                            </Input>
+                                required
+                                autoComplete="email"
+                                className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                            />
                         </div>
-                        <Input
-                            type="password"
-                            placeholder="password"
-                            labelName="Password"
-                            value="password"
+                    </div>
+
+                    <div>
+                        <div className="flex items-center justify-between">
+                            <label htmlFor="password" className="block text-sm/6 font-medium text-gray-900">
+                                Constraseña
+                            </label>
+                            {/* <div className="text-sm">
+                                <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                                    Forgot password?
+                                </a>
+                            </div> */}
+                        </div>
+                        <div className="mt-2">
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                required
+                                autoComplete="current-password"
+                                className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <button
+                            type="submit"
+                            className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
                         >
-                        </Input>
-                        <div className="mt-5">
-                            <button className="py-1 px-8 bg-blue-500 hover:bg-blue-800 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer select-none">Login</button>
-                        </div>
-                    </form>
-                </div>
+                            Sign in
+                        </button>
+                    </div>
+                </form>
+
             </div>
         </div>
     );
