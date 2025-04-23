@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Heart,User, PlusCircle, LogOut } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Menu = ({titulo,fotoPerfil}) => {
     const [isOpen, setIsOpen] = useState(false);
+    
     return (
         <nav className="flex justify-between items-center p-4 shadow-md bg-white">
             {/* Título */}
@@ -23,7 +25,8 @@ const Menu = ({titulo,fotoPerfil}) => {
                     <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg">
                         <ul className="text-sm text-gray-700">
                             <li className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                <User className="w-4 h-4 mr-2" /> Mi Perfil
+                                <User className="w-4 h-4 mr-2" />
+                                <Link to="/userprofile">Mi perfil</Link>
                             </li>
                             <li className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                 <PlusCircle className="w-4 h-4 mr-2" /> Crear Post
