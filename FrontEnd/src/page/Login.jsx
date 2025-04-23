@@ -1,10 +1,10 @@
 
-import LoginComponents from "../components/loginComponents/LoginComponents";
+import authLoginComponents from "../components/authComponents/authLoginComponents";
 
 const Login = () => {
     return (
        <>
-        <LoginComponents></LoginComponents>
+        <authLoginComponents></authLoginComponents>
        </>
     );
 };

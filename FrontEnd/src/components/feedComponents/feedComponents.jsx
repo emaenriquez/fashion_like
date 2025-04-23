@@ -1,12 +1,12 @@
 import { Heart, Trash2, Edit, BarChart2 } from "lucide-react";
 
-const CardFeed = ({ usuario, fotoPerfil, fechaPublicacion, likes, fotoFeed, rol }) => {
+const feedComponents = ({ usuario, fotoPerfil, fechaPublicacion, likes, fotoFeed, rol }) => {
     return (
         <div className="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md border m-5">
             {/* Usuario y fecha */}
             <div className="flex items-center space-x-2">
                 <img
-                    src={fotoPerfil} // Reemplaza con la imagen del usuario
+                    src={fotoPerfil}
                     alt="Perfil"
                     className="w-10 h-10 rounded-full"
                 />
@@ -50,11 +50,8 @@ const CardFeed = ({ usuario, fotoPerfil, fechaPublicacion, likes, fotoFeed, rol 
                 }
             </div>
 
-
-
-
         </div>
     );
 };
 
-export default CardFeed;
+export default feedComponents;

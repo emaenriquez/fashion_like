@@ -1,7 +1,7 @@
 
 import { useNavigate } from 'react-router-dom'
 
-const LoginComponents = () => {
+const authLoginComponents = () => {
 
     const navigate = useNavigate();
 
@@ -81,4 +81,4 @@ const LoginComponents = () => {
     );
 };
 
-export default LoginComponents;
+export default authLoginComponents;

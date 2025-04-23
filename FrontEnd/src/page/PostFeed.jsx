@@ -1,5 +1,5 @@
-import Menu from '../components/menuComponets/Menu'
-import CardFeed from '../components/cardFeed/CardFeed';
+import Menu from '../components/menuComponents/Menu'
+import CardFeed from '../components/feedComponents/feedComponents';
 const PostFeed = () => {
    
     return (
