@@ -1,11 +1,9 @@
 
-import authLoginComponents from "../components/authComponents/authLoginComponents";
+import AuthLoginComponents from "../components/authComponents/AuthLoginComponents";
 
 const Login = () => {
     return (
-       <>
-        <authLoginComponents></authLoginComponents>
-       </>
+       <AuthLoginComponents></AuthLoginComponents>
     );
 };
 

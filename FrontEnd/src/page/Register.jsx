@@ -1,10 +1,10 @@
 
-import authRegisterComponents from "../components/authComponents/authRegisterComponents";
+import AuthRegisterComponents from "../components/authComponents/authRegisterComponents";
 
 const Register = () => {
     return (
         <>
-            <authRegisterComponents></authRegisterComponents>
+            <AuthRegisterComponents></AuthRegisterComponents>
         </>
     );
 };

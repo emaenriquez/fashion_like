@@ -30,6 +30,7 @@ const Menu = ({titulo,fotoPerfil}) => {
                             </li>
                             <li className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                 <PlusCircle className="w-4 h-4 mr-2" /> Crear Post
+                                <Link to="/createpost">Crear</Link>
                             </li>
                             <li className="flex items-center px-4 py-2 text-red-500 hover:bg-gray-100 cursor-pointer">
                                 <LogOut className="w-4 h-4 mr-2" /> Cerrar Sesión

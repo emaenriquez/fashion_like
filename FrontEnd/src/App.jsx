@@ -7,6 +7,7 @@ import Register from './page/Register'
 import PostFeed from './page/PostFeed'
 import PostManager from './page/PostManager'
 import UserProfile from './page/UserProfile'
+import CreatePost from './page/CreatePost'
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
           <Route path='postfeed' element={<PostFeed />} />
           <Route path='postmanager' element={<PostManager />} />
           <Route path='userprofile' element={<UserProfile />} />
+          <Route path="createpost" element={<CreatePost/>}></Route>
         </Routes>
       </Router>
     </>

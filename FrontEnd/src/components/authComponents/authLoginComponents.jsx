@@ -1,7 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 
-import { useNavigate } from 'react-router-dom'
-
-const authLoginComponents = () => {
+const AuthLoginComponents = () => { // Cambiado a PascalCase
 
     const navigate = useNavigate();
 
@@ -15,11 +14,6 @@ const authLoginComponents = () => {
     return (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8" >
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                {/* <img
-                    alt="Your Company"
-                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                    className="mx-auto h-10 w-auto"
-                /> */}
                 <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
                     Inicie sesión en su cuenta
                 </h2>
@@ -48,11 +42,6 @@ const authLoginComponents = () => {
                             <label htmlFor="password" className="block text-sm/6 font-medium text-gray-900">
                                 Constraseña
                             </label>
-                            {/* <div className="text-sm">
-                                <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                                    Forgot password?
-                                </a>
-                            </div> */}
                         </div>
                         <div className="mt-2">
                             <input
@@ -81,4 +70,4 @@ const authLoginComponents = () => {
     );
 };
 
-export default authLoginComponents;
+export default AuthLoginComponents; // Cambiado a PascalCase

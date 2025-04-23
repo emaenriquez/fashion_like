@@ -1,7 +1,7 @@
 
 import { useNavigate } from 'react-router-dom'
 
-const authRegisterComponents = () => {
+const AuthRegisterComponents = () => {
 
     const navigate = useNavigate();
 
@@ -96,4 +96,4 @@ const authRegisterComponents = () => {
     );
 };
 
-export default authRegisterComponents;
+export default AuthRegisterComponents;
